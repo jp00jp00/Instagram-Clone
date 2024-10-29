@@ -1,0 +1,280 @@
+* {
+    margin: 5px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 1fr 300px;
+    gap: 10px;
+    width: 90%;
+}
+
+.bar {
+    align-self: start;
+    height: 80%;
+    width: 55%;
+    display: grid;
+    flex-direction: column;
+    position: relative;
+    gap: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.option {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+h3 {
+    height: 20px;
+    color: aliceblue;
+    font-style: italic;
+    font-family:  'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin: auto;
+}
+
+hr {
+    border: 1px solid #333;
+    width: 100%;
+    margin: auto;
+}
+
+.option img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.bar a {
+    color: white;
+    display: flex;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.icon-bar {
+    color: red;
+}
+
+.option:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.stories {
+    display: flex;
+    gap: 25px;
+    padding: 12px;
+    top: 0;
+}
+
+.story:hover {
+    cursor: pointer;
+}
+
+.story {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #333;
+    border: 2.5px solid #df00ab;
+    font-size: small;
+}
+
+.story span {
+    color: aliceblue;
+    border: 1px solid #4bb4f8;
+    background-color: #4bb4f8;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 42px;
+    top: 65px;
+}
+
+.story img {
+    display: flex;
+    width: 55px;
+    border-radius: 50%;
+    height: 55px;
+    position: relative;
+    margin: 0.5px;
+}
+
+.story p {
+    color: #777;
+    width: 55px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 500px;
+    margin: 100px;
+    height: 70%;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+}
+
+.post img {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    height: 40px;
+    width: 100%;
+}
+
+.content img {
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.content p {
+    display: flex;
+    color: aliceblue;
+    font-size: 12px;
+    position: relative;
+    align-items: center;
+}
+
+.suggestions {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.suggestions p {
+    display: flex;
+    position: relative;
+    justify-content: end;
+    top: -65px;
+    margin-left: auto;
+    color: #4bb4f8;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+}
+
+.suggestions h3 {
+    color: #999;
+    font-size: 16px;
+    display: flex;
+    top: -20px;
+    position: relative;
+}
+
+.suggestions a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.p  {
+    display: flex;
+    position: relative;
+    justify-content: end;
+    top: -75px;
+    margin-left: auto;
+    padding: 1px;
+    color: #4bb4f8;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.top p {
+    display: flex;
+    position: relative;
+    top: 1px;
+    background: none;
+}
+
+.top img {
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    
+}
+
+hr {
+    border: 1px solid #333;
+    width: 100%;
+    top: -20px;
+    position: relative;
+}
+
+.suggestions a:hover {
+    background-color: #333;
+    width: 100%;
+}
+
+.footer {
+    color: #777;
+    font-size: 12px;
+    top: 10px;
+    position: relative;
+}
+
+@media screen and (max-width: 450px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        display: flex;
+        
+    }
+
+    .bar, .suggestions {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px;
+    }
+
+    .option {
+        min-width: 100px;
+        min-width: 100px;        
+    }
+}
+
+@media screen and (min-width: 900px){
+    .bar {
+        position: sticky;
+    }
+}
